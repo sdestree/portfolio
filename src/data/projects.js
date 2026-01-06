@@ -32,7 +32,7 @@ export const projects = [
     ],
     stack: ["Next.js", "Typescript", "MongoDB", "Docker", "Firebase"],
     demoVideo: "/videos/demo-aulas.mp4",
-    github: true
+    github: "https://github.com/ramoswilly/AulasUsal"
   },
   {
     id: 3,
