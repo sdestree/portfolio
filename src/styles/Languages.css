@@ -1,0 +1,95 @@
+.languages {
+  padding: 6rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.languages-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.language-card,
+.cert-card {
+  background-color: #faf9f7;
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.language-card:hover,
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.languages h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.languages p {
+  color: #111827;
+  margin-bottom: 4rem;
+}
+
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Bloques */
+.languages-block {
+  text-align: left;
+}
+
+.languages-block h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Idiomas */
+.language-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.language-name {
+  display: block;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: #111827;
+}
+
+.language-level {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Certificaciones */
+.cert-item {
+  margin-bottom: 1.2rem;
+}
+
+.cert-title {
+  display: block;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: #111827;
+}
+
+.cert-meta {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+

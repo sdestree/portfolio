@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-title: 'Playfair Display', serif;
+  --font-text: 'Inter', sans-serif;
+
+  --color-text: #1f2933;
+  --color-muted: #6b7280;
+  --color-bg: #faf9f7;
+}
+
+body {
+  font-family: var(--font-text);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+}

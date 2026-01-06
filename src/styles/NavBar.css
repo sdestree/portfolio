@@ -1,0 +1,98 @@
+/* ===============================
+   NAVBAR BASE
+================================ */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.1rem 3rem;
+  background-color: rgba(250, 250, 250, 0.95);
+  backdrop-filter: blur(6px);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.35s ease, opacity 0.25s ease;
+}
+
+/* Visible */
+.navbar-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Hidden */
+.navbar-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* ===============================
+   LOGO
+================================ */
+.navbar-logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  cursor: default;
+}
+
+/* ===============================
+   LINKS
+================================ */
+.navbar-links {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links a {
+  font-size: 0.85rem;
+  color: #111827;
+  text-decoration: none;
+  position: relative;
+}
+
+/* underline sutil */
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 1px;
+  background-color: #111827;
+  transition: width 0.25s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   LANG
+================================ */
+.navbar-lang {
+  font-size: 0.8rem;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .navbar-links {
+    display: none; /* más adelante podemos hacer menú mobile */
+  }
+}
