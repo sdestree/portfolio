@@ -28,6 +28,7 @@
   cursor: pointer;
   transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
   opacity: 0.6;
+  position: relative;
 }
 
 .photo-card img {
@@ -49,7 +50,18 @@
   opacity: 0.85;
 }
 
-/* ---------- MENSAJE ---------- */
+/* ---------- TEXTO MOBILE (oculto por defecto) ---------- */
+
+.mobile-text {
+  display: none;
+  margin-top: 1rem;
+  padding: 0 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  animation: fadeIn 0.3s ease;
+}
+
+/* ---------- MENSAJE DESKTOP ---------- */
 
 .message-container {
   display: flex;
@@ -109,28 +121,26 @@
   .photo-card {
     width: 90%;
     max-width: 360px;
+    height: auto;
+    padding-bottom: 1rem;
+  }
+
+  .photo-card img {
     height: 420px;
   }
 
+  /* mostramos texto debajo de la foto activa */
+  .photo-card.active .mobile-text {
+    display: block;
+  }
+
+  /* ocultamos el mensaje global en mobile */
   .message-container {
-    flex-direction: column;
+    display: none;
+  }
+
+  .mobile-text p {
+    margin: 0;
     text-align: center;
-  }
-
-  .arrow {
-    transform: rotate(90deg);
-    animation: arrowMoveVertical 1.5s infinite ease-in-out;
-  }
-
-  @keyframes arrowMoveVertical {
-    0% {
-      transform: translateY(0) rotate(90deg);
-    }
-    50% {
-      transform: translateY(6px) rotate(90deg);
-    }
-    100% {
-      transform: translateY(0) rotate(90deg);
-    }
   }
 }

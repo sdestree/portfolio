@@ -33,16 +33,24 @@ export default function AboutMe() {
           <div
             key={item.id}
             className={`photo-card ${activeId === item.id ? 'active' : ''}`}
-            onClick={() => setActiveId(item.id)}
+            onClick={() =>
+              setActiveId(activeId === item.id ? null : item.id)
+            }
           >
-            <img src={item.image} alt="Foto personal" loading='lazy'/>
+            <img src={item.image} alt="Foto personal" loading="lazy" />
+
+            {/* TEXTO MOBILE */}
+            <div className="mobile-text">
+              <p>{item.text}</p>
+            </div>
           </div>
         ))}
       </div>
 
+      {/* TEXTO DESKTOP */}
       <div className="message-container">
         <span className="arrow">➜</span>
-        <p>{activeItem.text}</p>
+        <p>{activeItem?.text}</p>
       </div>
     </section>
   )
