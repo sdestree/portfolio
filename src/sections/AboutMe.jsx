@@ -30,28 +30,34 @@ export default function AboutMe() {
 
       <div className="photos-container">
         {data.map(item => (
-          <div
-            key={item.id}
-            className={`photo-card ${activeId === item.id ? 'active' : ''}`}
-            onClick={() =>
-              setActiveId(activeId === item.id ? null : item.id)
-            }
-          >
-            <img src={item.image} alt="Foto personal" loading="lazy" />
-
-            {/* TEXTO MOBILE */}
-            <div className="mobile-text">
-              <p>{item.text}</p>
+          <div key={item.id} className="photo-block">
+            <div
+              className={`photo-card ${activeId === item.id ? 'active' : ''}`}
+              onClick={() =>
+                setActiveId(activeId === item.id ? null : item.id)
+              }
+            >
+              <img src={item.image} alt="Foto personal" loading="lazy" />
             </div>
+
+            {/* MENSAJE MOBILE (FUERA DE LA FOTO) */}
+            {activeId === item.id && (
+              <div className="mobile-message">
+                <span className="arrow">➜</span>
+                <p>{item.text}</p>
+              </div>
+            )}
           </div>
         ))}
       </div>
 
-      {/* TEXTO DESKTOP */}
-      <div className="message-container">
-        <span className="arrow">➜</span>
-        <p>{activeItem?.text}</p>
-      </div>
+      {/* MENSAJE DESKTOP */}
+      {activeItem && (
+        <div className="message-container">
+          <span className="arrow">➜</span>
+          <p>{activeItem.text}</p>
+        </div>
+      )}
     </section>
   )
 }

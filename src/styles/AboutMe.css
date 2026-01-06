@@ -20,6 +20,12 @@
   margin-bottom: 3rem;
 }
 
+.photo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .photo-card {
   width: 280px;
   height: 340px;
@@ -28,7 +34,6 @@
   cursor: pointer;
   transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
   opacity: 0.6;
-  position: relative;
 }
 
 .photo-card img {
@@ -38,27 +43,14 @@
   object-position: center top;
 }
 
-/* estado activo */
 .photo-card.active {
   opacity: 1;
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* hover */
 .photo-card:hover {
   opacity: 0.85;
-}
-
-/* ---------- TEXTO MOBILE (oculto por defecto) ---------- */
-
-.mobile-text {
-  display: none;
-  margin-top: 1rem;
-  padding: 0 1rem;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  animation: fadeIn 0.3s ease;
 }
 
 /* ---------- MENSAJE DESKTOP ---------- */
@@ -85,18 +77,18 @@
   animation: arrowMove 1.5s infinite ease-in-out;
 }
 
+/* ---------- MENSAJE MOBILE ---------- */
+
+.mobile-message {
+  display: none;
+}
+
 /* ---------- ANIMACIONES ---------- */
 
 @keyframes arrowMove {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(6px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+  0% { transform: translateX(0); }
+  50% { transform: translateX(6px); }
+  100% { transform: translateX(0); }
 }
 
 @keyframes fadeIn {
@@ -122,25 +114,43 @@
     width: 90%;
     max-width: 360px;
     height: auto;
-    padding-bottom: 1rem;
   }
 
   .photo-card img {
     height: 420px;
   }
 
-  /* mostramos texto debajo de la foto activa */
-  .photo-card.active .mobile-text {
-    display: block;
-  }
-
-  /* ocultamos el mensaje global en mobile */
+  /* ocultamos mensaje desktop */
   .message-container {
     display: none;
   }
 
-  .mobile-text p {
-    margin: 0;
+  /* mensaje debajo de la foto */
+  .mobile-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+    animation: fadeIn 0.4s ease;
+  }
+
+  .mobile-message .arrow {
+    transform: rotate(90deg);
+    animation: arrowMoveVertical 1.5s infinite ease-in-out;
+  }
+
+  .mobile-message p {
+    font-size: 1rem;
+    line-height: 1.6;
     text-align: center;
+    max-width: 320px;
+  }
+
+  @keyframes arrowMoveVertical {
+    0% { transform: translateY(0) rotate(90deg); }
+    50% { transform: translateY(6px) rotate(90deg); }
+    100% { transform: translateY(0) rotate(90deg); }
   }
 }
