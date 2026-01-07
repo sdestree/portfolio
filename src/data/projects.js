@@ -14,8 +14,8 @@ export const projects = [
       "Panel de administración con gráficos y reportes"
     ],
     stack: ["C#", ".NET", "React", "SQL Server"],
-    demoVideo: "/videos/demo-aulas.mp4",
-    github: true
+    demoVideo: "/videos/demo-cabañas.mp4",
+    github: "https://github.com/sdestree/CABANAS9-9"
   },
   {
     id: 2,
@@ -30,23 +30,8 @@ export const projects = [
       "Testing funcional periódico, validando reglas de asignación y flujos críticos",
       "Colaboración con el equipo técnico durante el desarrollo"
     ],
-    stack: ["Next.js", "Typescript", "MongoDB", "Docker", "Firebase"],
+    stack: ["Next.js", "Typescript", "MongoDB", "Firebase"],
     demoVideo: "/videos/demo-aulas.mp4",
     github: "https://github.com/ramoswilly/AulasUsal"
-  },
-  {
-    id: 3,
-    title: "Web Galería Digital",
-    year: "2026",
-    description:
-      "Sitio web de una artista, exposición de sus pinturas",
-    featuresTitle: "",
-    features: [
-      "Diseñado en Figma",
-      "Programado en React"
-    ],
-    stack: ["React", "Figma"],
-    demoVideo: "/videos/demo-aulas.mp4",
-    github: true
   }
 ];
