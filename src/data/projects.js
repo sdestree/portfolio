@@ -30,8 +30,26 @@ export const projects = [
       "Testing funcional periódico, validando reglas de asignación y flujos críticos",
       "Colaboración con el equipo técnico durante el desarrollo"
     ],
-    stack: ["Next.js", "Typescript", "MongoDB", "Firebase"],
+    stack: ["Next.js", "Typescript", "MongoDB", "Firebase", "Vercel"],
     demoVideo: "/videos/demo-aulas.mp4",
     github: "https://github.com/ramoswilly/AulasUsal"
+  },
+  {
+    id:3,
+    title: "App para gestión de gastos grupales",
+    year: "2026",
+    description: "Aplicación web mobile-first desarrollada para facilitar la gestión de gastos compartidos durante viajes en grupo. Permite crear viajes, invitar participantes mediante un código, registrar gastos individuales y calcular automáticamente el balance entre los integrantes, indicando quién debe pagar y cuánto.",
+    featuresTitle: "Aspectos destacados: ",
+    features: [
+      "Creación de viajes y unión mediante código compartido",
+      "Gráfico circular que muestra la distribución de gastos por participante",
+      "Cálculo automático de deudas entre participantes y sugerencia de pago para saldar cuentas",
+      "Registro e inicio de sesión con Firebase Authentication",
+      "Base de datos en tiempo real con Firebase Firestore",
+      "Interfaz adaptada a dispositivos móviles"
+    ],
+    stack: ["React", "TypeScript", "Vite", "CSS", "Firebase", "Vercel"],
+    demoVideo: "/videos/demo-gastosviajes.mp4",
+    github: "https://github.com/sdestree/app-viajes-gastos"
   }
 ];
