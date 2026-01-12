@@ -30,6 +30,7 @@ function Stack() {
           <h3>Bases de Datos</h3>
           <ul>
             <li>SQL Server</li>
+            <li>Firestone</li>
             <li>MongoDB</li>
           </ul>
         </div>
@@ -38,7 +39,7 @@ function Stack() {
           <h3>DevOps & Tools</h3>
           <ul>
             <li>Git</li>
-            <li>Docker</li>
+            <li>Firebase</li>
             <li>Linux</li>
             <li>Vercel</li>
             <li>Figma</li>

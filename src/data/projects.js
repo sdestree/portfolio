@@ -48,7 +48,7 @@ export const projects = [
       "Base de datos en tiempo real con Firebase Firestore",
       "Interfaz adaptada a dispositivos móviles"
     ],
-    stack: ["React", "TypeScript", "Vite", "CSS", "Firebase", "Vercel"],
+    stack: ["React", "TypeScript", "Vite", "CSS", "Firebase", "Vercel", "Figma"],
     demoVideo: "/videos/demo-gastosviajes.mp4",
     github: "https://github.com/sdestree/app-viajes-gastos"
   }
