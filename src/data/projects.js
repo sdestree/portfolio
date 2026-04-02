@@ -17,7 +17,7 @@ export const projects = [
     demoVideo: "/videos/demo-cabañas.mp4",
     github: "https://github.com/sdestree/CABANAS9-9"
   },
-  {
+  /*{
     id: 2,
     title: "Sistema de asignación automática de aulas universitarias",
     year: "COLABORATIVO - 2025",
@@ -33,7 +33,7 @@ export const projects = [
     stack: ["Next.js", "Typescript", "MongoDB", "Firebase", "Vercel"],
     demoVideo: "/videos/demo-aulas.mp4",
     github: "https://github.com/ramoswilly/AulasUsal"
-  },
+  },*/
   {
     id:3,
     title: "App para gestión de gastos grupales",
@@ -51,5 +51,22 @@ export const projects = [
     stack: ["React", "TypeScript", "Vite", "CSS", "Firebase", "Vercel", "Figma"],
     demoVideo: "/videos/demo-gastosviajes.mp4",
     github: "https://github.com/sdestree/app-viajes-gastos"
+  },
+  {
+    id:4,
+    title: "Portafolio de artista",
+    year: "2026",
+    description: "Desarrollo de una web portfolio inmersiva orientada a la exploración emocional del contenido artístico.",
+    featuresTitle: "Detalles técnicos: ",
+    features: [
+      "Desarrollo frontend con React",
+      "Implementación de animaciones con Framer Motion",
+      "Diseño UX/UI personalizado",
+      "Layout responsive adaptable a distintos dispositivos",
+      "Deploy en Vercel"
+    ],
+    stack: ["React", "Framer Motion", "Vite", "Vercel"],
+    demoVideo: "/videos/demo-reverie.mp4",
+    github: "https://github.com/sdestree/reverie"
   }
 ];

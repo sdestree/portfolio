@@ -43,6 +43,7 @@ function Stack() {
             <li>Linux</li>
             <li>Vercel</li>
             <li>Figma</li>
+            <li>Claude</li>
           </ul>
         </div>
       </div>
